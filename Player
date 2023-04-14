@@ -1,0 +1,10 @@
+ import java.util.Scanner;
+public class Player{
+        int pguessNum;
+    public int pguessNumber(){
+        Scanner scan =new Scanner(System.in);
+         System.out.println("player kindly huess a number");
+         pguessNum=scan.nextInt();
+           return pguessNum;
+      }
+}
