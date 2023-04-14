@@ -1,0 +1,51 @@
+class Umpire{
+    int numFromGuesser;
+    int numFromPlayer1;
+    int numFromPlayer2;
+    int numFromPlayer3;
+
+void collectFromguesser(){
+            Guesser g=new Guesser();
+          numFromGuesser = g.guessNumber();
+        }
+     
+void collectFromplayer(){
+            Player p1=new Player();
+            Player p2=new Player();
+            Player p3=new Player();
+
+            numFromPlayer1= p1.pguessNumber(); 
+            numFromPlayer2= p2.pguessNumber();
+            numFromPlayer3= p3.pguessNumber();
+       }
+void compare(){
+   if(numFromGuesser==numFromPlayer1){
+            if(numFromGuesser==numFromPlayer2 && numFromGuesser==numFromPlayer3){
+                System.out.println("All are winner");
+             }
+            else if(numFromGuesser==numFromPlayer1 && numFromGuesser==numFromPlayer2 ){
+                System.out.println("plyaer1 and player2 are won");
+             }
+            else if(numFromGuesser==numFromPlayer1 && numFromGuesser==numFromPlayer3){
+                System.out.println("player1 && player3 are won");
+             }
+            else{
+                System.out.println("player1 won the game");
+             }
+        }
+   else if(numFromGuesser==numFromPlayer2){
+           if(numFromGuesser==numFromPlayer2 && numFromGuesser==numFromPlayer3){
+            System.out.println("player2 and player3 are won");
+           }
+           else{
+            System.out.println("player2 Won");
+           }
+    }
+   else if(numFromGuesser==numFromPlayer3){
+          System.out.println("player3 won the Game");
+          }
+   else{
+        System.out.println("Lost The Game!!");
+     }
+}
+} 
